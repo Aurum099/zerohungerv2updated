@@ -1,0 +1,28 @@
+﻿@model IEnumerable<zerohungerv2.DTO.distributionRcrdDTO>
+
+@{
+    ViewBag.Title = "dash";
+}
+
+<h2>Employee Dashboard</h2>
+
+<h3>Distribution Records</h3>
+<table border="1">
+    <tr>
+        <th>Distribution ID</th>
+        <th>Food ID</th>
+        <th>Distribution Date</th>
+        <th>Recipient</th>
+        <th>Quantity Distributed</th>
+    </tr>
+    @foreach (var record in Model)
+    {
+        <tr>
+            <td>@record.D_ID</td>
+            <td>@record.F_ID</td>
+            <td>@record.DISTRIBUTE_DATE</td>
+            <td>@record.RECIPIENT</td>
+            <td>@record.QT_DISTRIBUTE</td>
+        </tr>
+    }
+</table>
